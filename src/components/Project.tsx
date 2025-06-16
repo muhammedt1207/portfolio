@@ -91,7 +91,7 @@ export default function Projects() {
     <section className="min-h-screen bg-white dark:bg-black py-16 relative">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16 text-black dark:text-white">
-          My Projects
+          My Blogs
         </h2>
 
         {/* Custom Horizontal Scroll Container */}

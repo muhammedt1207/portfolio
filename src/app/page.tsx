@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
-import Header from '@/components/Header';
+// import Header from '@/components/Header';
 import AboutMe from '@/components/AboutMe';
 import Journey from '@/components/Journey';
 import TechStack from '@/components/TechStack';
@@ -9,6 +9,7 @@ import ContactMe from '@/components/ContactMe';
 import { ThemeProvider } from '@/lib/theme-provider';
 import { MotionProvider } from '@/lib/motion-provider';
 import { HeroParallaxDemo } from '@/components/Products';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 // Dynamically import components with loading
 const DynamicHeader = dynamic(() => import('@/components/Header'), { 
@@ -28,6 +29,7 @@ export default function Home() {
             <HeroParallaxDemo/>
             <Projects />
             <ContactMe />
+            <BackgroundBeams/>
           </Suspense>
         </main>
       </MotionProvider>

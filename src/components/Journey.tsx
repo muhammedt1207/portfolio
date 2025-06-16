@@ -2,6 +2,7 @@
 
 import { motion, useScroll, Variants } from 'framer-motion';
 import { useRef } from 'react';
+import { BackgroundBeams } from './ui/background-beams';
 
 interface TimelineItem {
   type: 'education' | 'bootcamp' | 'work';
@@ -69,6 +70,7 @@ export default function Journey() {
 
   return (
     <section className="min-h-screen bg-white dark:bg-black py-16 relative" ref={ref}>
+      
       <div className="container mx-auto relative">
         <h2 className="text-4xl font-bold text-center mb-16 text-black dark:text-white">
           My Journey
@@ -78,7 +80,7 @@ export default function Journey() {
         <div className="relative">
           {/* Center Line */}
           <motion.div 
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 dark:bg-gray-700"
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 dark:bg-gray-700 origin-top"
             style={{
               height: '100%',
               scaleY: scrollYProgress
@@ -106,7 +108,7 @@ export default function Journey() {
                 whileHover={item.isDropout ? "shatter" : undefined}
                 className={`w-1/2 relative 
                   ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}
-                  ${item.isDropout ? 'bg-red-50/20 p-4 rounded-lg border-l-4 border-red-500' : ''}`}
+                  ${item.isDropout ? ' p-4 rounded-lg border-l-4 border-red-500' : ''}`}
               >
                 <h3 className={`text-2xl font-semibold 
                   ${item.isDropout ? 'text-red-700 dark:text-red-400' : 'text-black dark:text-white'}`}>
@@ -130,6 +132,7 @@ export default function Journey() {
           ))}
         </div>
       </div>
+      <BackgroundBeams/>
     </section>
   );
 }

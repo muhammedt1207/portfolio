@@ -39,6 +39,7 @@ export default function AboutMe() {
             and am always excited to take on new challenges.
           </p>
         </div>
+     
       </motion.div>
     </section>
   );

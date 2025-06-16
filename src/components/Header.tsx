@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
   
-      <HeroHighlight className='h-[100vh] '>
+      <HeroHighlight className='h-screen '>
     <header className="min-h-screen flex flex-col justify-center items-center text-center relative">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -38,10 +38,10 @@ export default function Header() {
         transition={{ duration: 0.8 }}
         className="space-y-6"
       >
-        <h1 className="text-5xl font-bold text-black dark:text-white">
+        <h1 className="md:text-5xl text-3xl p-0 m-0 font-bold text-black dark:text-white">
           Hi, I&apos;m Muhammed T
         </h1>
-        <p className="text-2xl text-gray-700 dark:text-gray-300">
+        <p className="text-2xl text-gray-700 m-0 p-0 dark:text-gray-300">
          Full Stack Developer
         </p>
         
